@@ -23,6 +23,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         h1 {
@@ -34,17 +35,18 @@
             line-height: 1.6;
         }
 
-        .time {
-            font-size: 24px;
-            color: #e74c3c;
-        }
     </style>
+    <script>
+        function redirectToDashboard() {
+            window.location.href = '/dashboard';
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My First Laravel View!</h1>
-        <p>This is a simple Laravel application.</p>
-        <p class="time">Current time: {{ date('Y-m-d H:i:s') }}</p>
+    <div class="container" onclick="redirectToDashboard()">
+        <h1>Welcome to My First Laravel Application!</h1>
+        <p>Click here to start..</p>
     </div>
 </body>
 </html>
+
